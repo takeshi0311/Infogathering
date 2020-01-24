@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'home/index'
-  get 'infos/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "infos#index"
+  resources :infos, only: [:new, :create, :show, :destroy] do
+    resources :comments, only: [:index]
+  end
 end
