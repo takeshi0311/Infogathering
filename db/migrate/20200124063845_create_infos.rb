@@ -1,8 +1,9 @@
 class CreateInfos < ActiveRecord::Migration[5.2]
   def change
     create_table :infos do |t|
-      t.string :title,    null: false
-      t.string :text,     null: false
+      t.text :title,    null: false
+      t.text :text,     null: false
+      t.text :detail,     null: false
       t.timestamps
     end
   end
