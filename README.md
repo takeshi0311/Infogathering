@@ -39,6 +39,7 @@ Things you may want to cover:
 |------|----|-------|
 |title|text|null: false|
 |text|text|null: false|
+|detail|text|null: false|
 ### Association
 - has_many :users,  through:  :user_infos  
 - has_many :user_infos
