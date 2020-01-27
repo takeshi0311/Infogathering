@@ -3,6 +3,7 @@ class InfosController < ApplicationController
 
   # スクレイピングによって得られた新着情報を一覧表示させる
   def index
+    @infos = Info.order('id ASC').limit(20)
   end
 
   # アウトプットを各画面を表示させるアクション
