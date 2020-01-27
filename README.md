@@ -37,9 +37,10 @@ Things you may want to cover:
 ## infosテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
-|text|text|null: false|
-|detail|text|null: false|
+|title|text|null: false, unique: true|
+|text|text|null: false, unique: true|
+|url|text|null: false, unique: true|
+<!-- |detail|text|null: false| -->
 ### Association
 - has_many :users,  through:  :user_infos  
 - has_many :user_infos
