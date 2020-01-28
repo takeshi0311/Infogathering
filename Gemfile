@@ -64,3 +64,4 @@ gem 'haml-rails'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'mechanize'
+gem 'whenever', require: false
