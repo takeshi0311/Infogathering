@@ -9,17 +9,49 @@
                 font-family: 'Anton', sans-serif;
                 font-size: 70px;
               }
-              a.btn.btn-info{
+              .stock-info{
                 margin-left: 150px;
                 margin-top: 20px;
                 margin-bottom: 35px;
                 padding-top: 20px;
+                display: inline-block;
+                max-width: 180px;
+                text-align: left;
+                border: 3px solid #9ec34b;
+                font-size: 16px;
+                color: #9ec34b;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 20px 16px;
+                border-radius: 4px;
+                transition: .4s;
               }
-              a.btn.btn-primary{
+              .stock-info:hover {
+                background-color: #9ec34b;
+                border-color: #cbe585;
+                color: #FFF;
+              }
+              .entry_button{
                 margin-left: 50px;
                 margin-top: 20px;
                 margin-bottom: 35px;
                 padding-top: 20px;
+                display: inline-block;
+                max-width: 180px;
+                text-align: left;
+                border: 3px solid #9ec34b;
+                font-size: 16px;
+                color: #9ec34b;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 20px 16px;
+                border-radius: 4px;
+                transition: .4s;
+              }
+              .entry_button:hover {
+                background-color: #9ec34b;
+                border-color: #cbe585;
+                color: #FFF;
               }
 }
 .content{
