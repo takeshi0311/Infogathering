@@ -12,16 +12,19 @@ class InfosController < ApplicationController
 
   # アウトプットを保存する
   def create
+    # @infos = Info.new 
+    # @infos = @infos.users << current_user
+    # @infos = @infos.save
+    # redirect_to root_path, notice: 'グループを作成しました'
   end
 
   # 自分がアウトプットした情報もしくは保存した情報の詳細を見られるようにする
   def show
+    
   end
 
   # 新着情報がある期間経つと削除できるようにする
   def destroy
   end
-
-
 
 end
