@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_063845) do
+ActiveRecord::Schema.define(version: 2020_01_31_151233) do
+
+  create_table "info_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "info_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["info_id"], name: "index_info_users_on_info_id"
+    t.index ["user_id"], name: "index_info_users_on_user_id"
+  end
 
   create_table "infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title"
@@ -21,8 +30,8 @@ ActiveRecord::Schema.define(version: 2020_01_24_063845) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
+    t.string "email", null: false
+    t.string "encrypted_password", null: false
     t.string "username", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -33,4 +42,6 @@ ActiveRecord::Schema.define(version: 2020_01_24_063845) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "info_users", "infos"
+  add_foreign_key "info_users", "users"
 end

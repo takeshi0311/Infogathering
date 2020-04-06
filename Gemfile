@@ -65,3 +65,4 @@ gem 'font-awesome-sass'
 gem 'devise'
 gem 'mechanize'
 gem 'whenever', require: false
+gem 'erb2haml'

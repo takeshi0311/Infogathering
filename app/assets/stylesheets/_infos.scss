@@ -54,23 +54,35 @@
                 color: #FFF;
               }
 }
-.content{
-  .content__title{
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration : underline;
-    margin-top: 30px;
-    margin-left: 30px;
-                  a.content__title--link{
-                    color: black;
-                  }
-  }
-  .content__summary{
-    margin-left: 50px;
-    color: black;
-                  a.content__summary--link{
-                    color: black;
-                  }
-  }
+.main{
+  display: flex;
+      .button{
+        margin-top: 35px;
+        margin-left: 20px;
+      }
+      .button:hover {
+        // background-color: #9ec34b;
+        border-color: #cbe585;
+        color: #FFF;
+      }
+      .content{
+        .content__title{
+          color: black;
+          font-size: 18px;
+          font-weight: bold;
+          text-decoration : underline;
+          margin-top: 32px;
+          margin-left: 15px;
+                        a.content__title--link{
+                          color: black;
+                                        }
+                        }
+        .content__summary{
+          margin-left: 30px;
+          color: black;
+                        a.content__summary--link{
+                          color: black;
+                                         }
+                         }
+               }
 }

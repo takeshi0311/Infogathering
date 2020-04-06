@@ -2,14 +2,22 @@
   %p.anton IT What's new
   .stock-info
     = link_to '　ストック　', "#"
-  .entry_button
-    = link_to 'サインアウト', "/users/sign_out", method: :delete
+  - if user_signed_in?
+    .entry_button
+      = link_to 'ログアウト', destroy_user_session_path, method: :delete
+  - else
+    .entry_button
+      = link_to 'ログイン', new_user_session_path
+      = link_to '新規登録', new_user_registration_path
 %hr{:noshade => "noshade", :size => "80"}/
 - @infos.each do |info|
-  .content
-    .content__title
-      %a.content__title--link{:href => "#{info.url}"}
-        =info.title
-    .content__summary
-      %a.content__summary--link{:href => "#{info.url}"}
-        =info.text
+  .main
+    -# .button
+      -# = button_to "保存", {controller: 'infos', action: 'show'}, {method: :get}
+    .content
+      .content__title
+        %a.content__title--link{:href => "#{info.url}"}
+          =info.title
+      .content__summary
+        %a.content__summary--link{:href => "#{info.url}"}
+          =info.text
