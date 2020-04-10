@@ -1,7 +1,11 @@
 .Top-component
   %p.anton IT What's new
-  .stock-info
-    = link_to '　ストック　', "#"
+  - if user_signed_in?
+    .stock-info
+      = link_to 'ストック', info_path(current_user)
+  - else
+    .stock-info
+      = link_to 'ストック', new_user_session_path
   - if user_signed_in?
     .entry_button
       = link_to 'ログアウト', destroy_user_session_path, method: :delete
@@ -12,12 +16,12 @@
 %hr{:noshade => "noshade", :size => "80"}/
 - @infos.each do |info|
   .main
-    -# .button
-      -# = button_to "保存", {controller: 'infos', action: 'show'}, {method: :get}
+    .button
+      = button_to "保存", {controller: 'infos', action: 'create'}, {method: :post, params: {id: "#{info.id}"}, class: "btn btn-default"}
     .content
       .content__title
         %a.content__title--link{:href => "#{info.url}"}
-          =info.title
+          = info.title
       .content__summary
         %a.content__summary--link{:href => "#{info.url}"}
-          =info.text
+          = info.text

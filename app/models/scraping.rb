@@ -1,4 +1,6 @@
 class Scraping
+
+  # -----はてなブックマークITーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
   def self.get_infos_attribute(element,main)
     title = main.at(element)
     title = title.get_attribute('title')
@@ -39,5 +41,7 @@ class Scraping
       info.save
     end
   end
+# -----はてなブックマークITーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
 
 end

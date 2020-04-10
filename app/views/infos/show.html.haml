@@ -1,0 +1,11 @@
+- @info.each do |info|
+  .main
+    -# .button
+    -#   = button_to "保存", {controller: 'infos', action: 'create'}, {method: :post, params: {id: "#{info.id}"}, class: "btn btn-default"}
+    .content
+      .content__title
+        %a.content__title--link{:href => "#{info.url}"}
+          = info.title
+      .content__summary
+        %a.content__summary--link{:href => "#{info.url}"}
+          = info.text
