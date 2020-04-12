@@ -67,3 +67,4 @@ gem 'mechanize'
 gem 'whenever', require: false
 gem 'erb2haml'
 gem 'pry-rails'
+gem 'kaminari'
