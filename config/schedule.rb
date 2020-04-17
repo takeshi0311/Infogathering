@@ -4,8 +4,8 @@
 # http://en.wikipedia.org/wiki/Cron
 
 # Example:
-set :environment, :development
-set :environment, :production
+# set :environment, :development
+# set :environment, :production
 set :output, { :error => 'log/whenever.log', :standard => 'log/cron.log' }
 
 every 3.minutes do
