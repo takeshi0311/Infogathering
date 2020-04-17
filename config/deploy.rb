@@ -31,8 +31,7 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+end
 
 set :whenever_command, "bundle exec whenever"
 require "whenever/capistrano"
-
-end
