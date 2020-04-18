@@ -8,15 +8,15 @@
 # set :environment, :production
 set :output, { :error => 'log/whenever.log', :standard => 'log/cron.log' }
 
-every 3.minutes do
+every 3.hours do
   runner "Scraping.saveinfo"
 end
 
-every 3.minutes do
+every 3.hours do
   runner "Scraping.developers"
 end
 
-every 3.minutes do
+every 3.hours do
   runner "Scraping.cybozu"
 end
 # Learn more: http://github.com/javan/whenever
