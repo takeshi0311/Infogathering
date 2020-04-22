@@ -1,88 +1,202 @@
-* {
-  box-sizing: border-box;
+.all__content{
+  width: 100%;
+  height: 750px;
+  background: #f5f5f5;
+  .topinfo{
+    display: flex;
+  p.newinfo{
+    position: relative;
+    top: 20px;
+    color:#0E347B;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 350px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  p.ranking{
+    position: relative;
+    top: 20px;
+    color:#0E347B;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 560px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
 }
-.Top-component{
+.main__all__content{
   display: flex;
-  margin-top: 15px;
-  margin-left: 530px;
-              p.anton{
-                font-family: 'Anton', sans-serif;
-                font-size: 70px;
-              }
-              .stock-info{
-                margin-left: 150px;
-                margin-top: 20px;
-                margin-bottom: 35px;
-                padding-top: 20px;
-                display: inline-block;
-                max-width: 180px;
-                text-align: left;
-                border: 3px solid #9ec34b;
-                font-size: 16px;
-                color: #9ec34b;
-                text-decoration: none;
+  .main__scroll{
+    position: relative;
+    top: 10px;
+    background: white;
+    width: 820px;
+    height: 620px;
+    margin-left: 15px;
+    border:2px solid;
+    border-color:black;
+    border-radius: 0.5em;
+    overflow: scroll;
+    .main{
+      position: relative;
+      top: 10px;
+      width: 770px;
+      border:2px solid;
+      border-color:rgb(192, 168, 168);
+      border-radius: 0.9em;
+      margin: 0 0 10px 15px;
+      background: white;
+          .content{
+            .content__title{
+              color: black;
+              font-size: 18px;
+              font-weight: bold;
+              text-decoration : underline;
+              margin-top: 20px;
+              margin-left: 15px;
+                            a.content__title--link{
+                              color: black;
+                                            }
+                            }
+            .content__summary{
+              margin-left: 30px;
+              color: black;
+                            a.content__summary--link{
+                              color: black;
+                                            }
+                            }
+                  }
+              .aicon{
+                    display: flex;
+                    button{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    outline: none;
+                    padding: 0;
+                    appearance: none;
+                    margin-top: 20px;
+                    margin-left: 500px;
+                    margin-bottom: 10px;
+                    }
+                    button:hover{
+                      cursor: pointer;
+                      transform: scale(1.1, 1.1)
+                    }
+                    .far.fa-bookmark{
+                      background: #0E347B;
+                      color: white;
+                      font-weight: bold;
+                      font-size: 20px;
+                      padding-top: 10px;
+                      padding-bottom: 10px;
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      border-radius: 0.9em;
+                    }
+                    .fas.fa-check{
+                      background: #0E347B;
+                      color: white;
+                      font-weight: bold;
+                      font-size: 20px;
+                      padding-top: 10px;
+                      padding-bottom: 10px;
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      border-radius: 0.9em;
+                    }
+                    i.far.fa-eye{
+                    margin-top: 25px;
+                    margin-left: 30px;
+                    margin-bottom: 10px;
+                    font-size: 25px;
+                    color:#0E347B;
+                    }
+                  }
+          }
+    }
+// 本日のランキングーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+    .main__scroll_ranking{
+      position: relative;
+      top: 10px;
+      background: white;
+      width: 560px;
+      height: 620px;
+      margin-left: 20px;
+      border:2px solid;
+      border-color:black;
+      border-radius: 0.5em;
+      overflow: scroll;
+      .ranking{
+        position: relative;
+        top: 10px;
+        width: 500px;
+        border:2px solid;
+        border-color:rgb(192, 168, 168);
+        border-radius: 0.9em;
+        margin: 0 0 10px 25px;
+        background: white;
+        .rainking_content__title{
+              .content__title{
+                color: black;
+                font-size: 18px;
                 font-weight: bold;
-                padding: 20px 16px;
-                border-radius: 4px;
-                transition: .4s;
-              }
-              .stock-info:hover {
-                background-color: #9ec34b;
-                border-color: #cbe585;
-                color: #FFF;
-              }
-              .entry_button{
-                margin-left: 50px;
+                text-decoration : underline;
                 margin-top: 20px;
-                margin-bottom: 35px;
-                padding-top: 20px;
-                display: inline-block;
-                max-width: 180px;
-                text-align: left;
-                border: 3px solid #9ec34b;
-                font-size: 16px;
-                color: #9ec34b;
-                text-decoration: none;
-                font-weight: bold;
-                padding: 20px 16px;
-                border-radius: 4px;
-                transition: .4s;
-              }
-              .entry_button:hover {
-                background-color: #9ec34b;
-                border-color: #cbe585;
-                color: #FFF;
-              }
-}
-.main{
-  display: flex;
-      .button{
-        margin-top: 35px;
-        margin-left: 20px;
+                margin-left: 15px;
+                              a.content__title--link{
+                                color: black;
+                                              }
+                              }
+                    }
+                .aicon{
+                      display: flex;
+                      button{
+                      background-color: transparent;
+                      border: none;
+                      cursor: pointer;
+                      outline: none;
+                      padding: 0;
+                      appearance: none;
+                      margin-top: 20px;
+                      margin-left: 250px;
+                      margin-bottom: 10px;
+                      }
+                      button:hover{
+                        cursor: pointer;
+                        transform: scale(1.1, 1.1)
+                      }
+                      .far.fa-bookmark{
+                        background: #0E347B;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 14px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        border-radius: 0.9em;
+                        
+                      }
+                      .fas.fa-check{
+                        background: #0E347B;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 14px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        border-radius: 0.9em;
+                      }
+                      i.far.fa-eye{
+                      margin-top: 25px;
+                      margin-left: 30px;
+                      margin-bottom: 10px;
+                      font-size: 20px;
+                      color:#0E347B;
+                      }
+                    }
+            }
       }
-      .button:hover {
-        // background-color: #9ec34b;
-        border-color: #cbe585;
-        color: #FFF;
-      }
-      .content{
-        .content__title{
-          color: black;
-          font-size: 18px;
-          font-weight: bold;
-          text-decoration : underline;
-          margin-top: 32px;
-          margin-left: 15px;
-                        a.content__title--link{
-                          color: black;
-                                        }
-                        }
-        .content__summary{
-          margin-left: 30px;
-          color: black;
-                        a.content__summary--link{
-                          color: black;
-                                         }
-                         }
-               }
+  }
 }

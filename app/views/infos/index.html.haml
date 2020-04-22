@@ -1,28 +1,69 @@
-.Top-component
-  %p.anton IT What's new
-  - if user_signed_in?
-    .stock-info
-      = link_to 'ストック', info_path(current_user)
-  - else
-    .stock-info
-      = link_to 'ストック', new_user_session_path
-  - if user_signed_in?
-    .entry_button
-      = link_to 'ログアウト', destroy_user_session_path, method: :delete
-  - else
-    .entry_button
-      = link_to 'ログイン', new_user_session_path
-      = link_to '新規登録', new_user_registration_path
-%hr{:noshade => "noshade", :size => "80"}/
-- @infos.each do |info|
-  .main
-    .button
-      = button_to "保存", {controller: 'infos', action: 'create'}, {method: :post, params: {id: "#{info.id}"}, class: "btn btn-default"}
-    .content
-      .content__title
-        %a.content__title--link{:href => "#{info.url}"}
-          = info.title
-      .content__summary
-        %a.content__summary--link{:href => "#{info.url}"}
-          = info.text
-= paginate(@infos)
+= render 'header'
+.all__content
+  .topinfo
+    %p.newinfo 新着情報
+    %p.ranking 本日のランキング
+  .main__all__content
+    - if user_signed_in?
+      .main__scroll 
+        - @infos.each do |info|
+          - unless @infoid.include?(info.id)
+            .main
+              .content
+                .content__title
+                  %a.content__title--link{ href: "#{info.url}", id: "#{info.id}", rel: "noopener noreferrer", target: "_blank"}
+                    = info.title
+                .content__summary
+                  %a.content__summary--link{ href: "#{info.url}", id: "#{info.id}", rel: "noopener noreferrer", target: "_blank"}
+                    = info.text
+              .aicon
+                .button
+                  = button_to controller: 'infos', action: 'create', method: :post, params: {id: "#{info.id}"} do
+                    %i.far.fa-bookmark.afterread あとで読む
+                    -# %i.fas.fa-check
+                %i.far.fa-eye #{info.see}
+      .main__scroll_ranking
+        - @info_rank.each do |info|
+          .ranking
+            .rainking_content__title
+              .content__title
+                %a.content__title--link{ href: "#{info.url}", rel: "noopener noreferrer", target: "_blank"}
+                  = info.title
+            .aicon
+              .button
+                = button_to controller: 'infos', action: 'create', method: :post, params: {id: "#{info.id}"} do
+                  %i.far.fa-bookmark あとで読む
+                  -# %i.fas.fa-check
+              %i.far.fa-eye #{info.see}
+    - else
+      .main__scroll 
+        - @infos.each do |info|
+          .main
+            .content
+              .content__title
+                %a.content__title--link{ href: "#{info.url}", id: "#{info.id}", rel: "noopener noreferrer", target: "_blank"}
+                  = info.title
+              .content__summary
+                %a.content__summary--link{ href: "#{info.url}", id: "#{info.id}", rel: "noopener noreferrer", target: "_blank"}
+                  = info.text
+            .aicon
+              .button
+                = button_to controller: 'infos', action: 'create', method: :post, params: {id: "#{info.id}"} do
+                  %i.far.fa-bookmark あとで読む
+                  -# %i.fas.fa-check
+              %i.far.fa-eye #{info.see}
+      .main__scroll_ranking
+        - @info_rank.each do |info|
+          .ranking
+            .rainking_content__title
+              .content__title
+                %a.content__title--link{ href: "#{info.url}", rel: "noopener noreferrer", target: "_blank"}
+                  = info.title
+            .aicon
+              .button
+                = button_to controller: 'infos', action: 'create', method: :post, params: {id: "#{info.id}"} do
+                  %i.far.fa-bookmark あとで読む
+                  -# %i.fas.fa-check
+              %i.far.fa-eye #{info.see}
+= render 'footer'
+-# = paginate(@infos)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_31_151233) do
+ActiveRecord::Schema.define(version: 2020_04_20_123456) do
 
   create_table "info_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "info_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_01_31_151233) do
     t.text "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "see", default: 0
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
