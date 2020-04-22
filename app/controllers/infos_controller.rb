@@ -1,14 +1,17 @@
 class InfosController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :see]
 
   # スクレイピングによって得られた新着情報を一覧表示させる
   def index
-    @infos = Info.order('id DESC').page(params[:page]).per(30)
-  end
+    # @infos = Info.order('id DESC').page(params[:page]).per(30)
+    @infos = Info.order('id DESC')
+    @info_rank = Info.all.order(see: "DESC").limit(30)
 
-  # アウトプットを各画面を表示させるアクション
-  def new
-
+    @infoid =[]
+    info_stock = InfoUser.where(user_id: current_user)
+    info_stock.each do |info|
+      @infoid << info.info_id
+    end
   end
 
   # アウトプットを保存する
@@ -43,7 +46,21 @@ class InfosController < ApplicationController
   end
 
   # 新着情報がある期間経つと削除できるようにする
+  # def delete
+  #  InfoUser.find_by(info_id: params[:id]).delete
+  #  redirect_to info_path(current_user)
+  # end
+
   def destroy
+  
+  end
+
+  #閲覧数のカウント：記事のURLがクリックされたら閲覧数が一つ増える
+  def see
+    @info = Info.find(params[:id])
+    see_number = @info.see
+    see_number += 1
+    @info.update(see: see_number)
   end
 
 end

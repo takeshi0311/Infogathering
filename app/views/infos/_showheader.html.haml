@@ -1,0 +1,17 @@
+.Top-component
+  %i.fas.fa-search
+  %input{ placeholder: "キーワードを入力してください", type: "text", class:"search__box"}/
+  .topaicon
+    %p.anton Infogathering
+    %p.sub 〜新しい知見を生み出すまとめサイト〜
+  - if user_signed_in?
+    = link_to(content_tag(:i, "", class: 'fas fa-arrow-alt-circle-left fa-4x'), root_path, class: "return")
+  - else
+    = link_to(content_tag(:i, "", class: 'far fa-bookmark fa-4x'), new_user_session_path, class: "stock_bookmark")
+  - if user_signed_in?
+    = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "user__login"
+    %i.fas.fa-user 
+    %span #{current_user.username}
+  - else
+    = link_to 'ログイン', new_user_session_path, class: "user__login"
+    = link_to '新規登録', new_user_registration_path, class: "user__signup"

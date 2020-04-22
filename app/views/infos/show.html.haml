@@ -1,11 +1,35 @@
-- @info.each do |info|
-  .main
-    -# .button
-    -#   = button_to "保存", {controller: 'infos', action: 'create'}, {method: :post, params: {id: "#{info.id}"}, class: "btn btn-default"}
-    .content
-      .content__title
-        %a.content__title--link{:href => "#{info.url}"}
-          = info.title
-      .content__summary
-        %a.content__summary--link{:href => "#{info.url}"}
-          = info.text
+= render 'showheader'
+.all__content
+  .topinfo
+    %p.stockinfo ストック情報
+    -# %p.ranking 本日のランキング
+  .main__all__content__show 
+    -# - if user_signed_in?
+    .main__scroll__show 
+      - @info.each do |info|
+        -# - unless @infoid.include?(info.id)
+        .main__show 
+          .content__show 
+            .content__title__show 
+              %a.content__title--link__show{ href: "#{info.url}", id: "#{info.id}", rel: "noopener noreferrer", target: "_blank"}
+                = info.title
+            .content__summary__show
+              %a.content__summary--link__show{ href: "#{info.url}", id: "#{info.id}", rel: "noopener noreferrer", target: "_blank"}
+                = info.text
+          .aicon__show 
+            -# .button
+            -#   %i.fas.fa-trash-alt{id: "#{info.id}"} ストックから外す
+              -# = button_to controller: 'infos', action: 'destroy', method: :delete, params: {id: "#{info.id}"} do
+              -# = button_to controller: 'infos', action: 'destroy', method: :delete, params: {id: "#{info.id}"} do
+                -# %i.fas.fa-check
+            %i.far.fa-eye.showeye #{info.see}
+= render 'footer'
+-# - @info.each do |info|
+-#   .main
+-#     .content
+-#       .content__title
+-#         %a.content__title--link{:href => "#{info.url}"}
+-#           = info.title
+-#       .content__summary
+-#         %a.content__summary--link{:href => "#{info.url}"}
+-#           = info.text
