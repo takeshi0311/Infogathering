@@ -1,3 +1,4 @@
+@media (min-width: 1080px){
 .return{
   margin-top: 15px;
   margin-left: 500px;
@@ -73,3 +74,83 @@ p.stockinfo{
           }
     }
   }
+}
+@media (max-width: 480px){
+  .return{
+    position: relative;
+    right: 90px;
+    font-size: 8px;
+    margin-top: 60px;
+    color:white;
+  }
+  .return:hover{
+    cursor: pointer;
+    transform: scale(1.1, 1.1)
+  }
+  
+  
+  p.stockinfo{
+    position: relative;
+      top: 15px;
+      color:#0E347B;
+      font-weight: bold;
+      font-size: 25px;
+      margin-left: 120px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .main__all__content__show {
+    // display: flex;
+    .main__scroll__show{
+      position: relative;
+      top: 10px;
+      background: white;
+      width: 330px;
+      height: 1120px;
+      margin-left: 20px;
+      border:2px solid;
+      border-color:black;
+      border-radius: 0.5em;
+      overflow: scroll;
+      .main__show {
+        position: relative;
+        top: 10px;
+        width: 280px;
+        border:2px solid;
+        border-color:rgb(192, 168, 168);
+        border-radius: 0.9em;
+        margin: 0 0 10px 30px;
+        background: white;
+            .content__show {
+              .content__title__show{
+                color: black;
+                font-size: 18px;
+                font-weight: bold;
+                text-decoration : underline;
+                margin-top: 20px;
+                margin-left: 15px;
+                              a.content__title--link__show{
+                                color: black;
+                                              }
+                              }
+              .content__summary__show{
+                margin-left: 30px;
+                color: black;
+                              a.content__summary--link__show{
+                                color: black;
+                                              }
+                              }
+                    }
+                .aicon__show{
+                      i.far.fa-eye.showeye{
+                      margin-top: 25px;
+                      margin-left: 30px;
+                      margin-bottom: 10px;
+                      font-size: 25px;
+                      color:#0E347B;
+                      }
+                    }
+            }
+      }
+    }
+}

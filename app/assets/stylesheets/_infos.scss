@@ -31,13 +31,16 @@
     position: relative;
     top: 10px;
     background: white;
-    width: 820px;
+    width: 810px;
     height: 620px;
+    // height: 100vh;
     margin-left: 15px;
     border:2px solid;
     border-color:black;
     border-radius: 0.5em;
-    overflow: scroll;
+    // overflow: scroll;
+    overflow-x : hidden;
+    overflow-y : auto;
     .main{
       position: relative;
       top: 10px;
@@ -232,11 +235,9 @@
     }
   }
   .main__all__content{
-    // display: flex;
     .main__scroll{
       position: relative;
       bottom: 40px;
-      // top: 10px;
       background: white;
       width: 330px;
       height: 500px;
@@ -244,7 +245,8 @@
       border:2px solid;
       border-color:black;
       border-radius: 0.5em;
-      overflow: auto;
+      overflow-x : hidden;
+      overflow-y : auto;
       .main{
         position: relative;
         top: 10px;
@@ -253,7 +255,7 @@
         border-color:rgb(192, 168, 168);
         border-radius: 0.9em;
         margin: 0 0 10px 25px;
-        background: white;
+        background: #ffffff;
             .content{
               .content__title{
                 color: black;
