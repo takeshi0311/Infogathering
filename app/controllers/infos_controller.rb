@@ -45,12 +45,6 @@ class InfosController < ApplicationController
     end
   end
 
-  # 新着情報がある期間経つと削除できるようにする
-  # def delete
-  #  InfoUser.find_by(info_id: params[:id]).delete
-  #  redirect_to info_path(current_user)
-  # end
-
   def destroy
   
   end

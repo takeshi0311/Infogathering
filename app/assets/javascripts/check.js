@@ -6,5 +6,6 @@ $(window).on('turbolinks:load', function(){
         $(this).replaceWith(`<i class="fas fa-check"></i>`);
     });
   }
+  $('#user_username').focus();
   });
   })
