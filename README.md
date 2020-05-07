@@ -57,7 +57,7 @@ pass：2020<br>
 上記のサイトに入ると、各サイトからその日スクレイピングした情報を閲覧することができます。<br>
 見たい情報がある場合、タイトルを押すことでサイトに飛ぶことができます。<br>
 また新規登録をすることで、あとで読みたい記事がある場合は「あとで読む」ボタンを押すことでストックすることができます。<br><br>
-<img border="0" src="https://github.com/takeshi0311/Infogathering/blob/master/images/Infogathering1.png" width="1000" height="500" alt="天気メッセージ一覧">
+<img border="0" src="https://github.com/takeshi0311/Infogathering/blob/master/images/Infogathering1.png" width="900" height="500" alt="天気メッセージ一覧">
 
 新規登録すると、「あとで読む」ボタンをクリックすることができ、<br>
 ストックボタンを押すことで「あとで読む」をクリックした記事が一覧で確認することできます。<br>
