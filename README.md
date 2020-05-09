@@ -18,6 +18,10 @@ http://www.infogathering.info/
 
 ユーザー名：62-night<br>
 pass：2020
+
+テストユーザー
+メールアドレス：test1234@test.com
+pass:test1234
  
 # DEMO
  ・新規登録<br>
