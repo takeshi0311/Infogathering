@@ -56,6 +56,11 @@ pass:test1234<br>
  
 ユーザー名：62-night<br>
 pass：2020<br>
+
+ユーザーログインは以下のテストユーザーをお使いください。
+テストユーザー
+メールアドレス：test1234@test.com
+pass:test1234
  
 # Usage
 基本的な使い方<br>
@@ -76,12 +81,6 @@ pass：2020<br>
 以下のpassを入力してください。<br>
 ユーザー名：62-night<br>
 pass：2020<br>
- 
-ユーザーログインは以下のテストユーザーをお使いください。<br>
-テストユーザー<br>
-メールアドレス：test1234@test.com<br>
-pass:test1234<br>
- 
  
 # Author
  
