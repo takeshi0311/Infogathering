@@ -19,9 +19,10 @@ http://www.infogathering.info/
 ユーザー名：62-night<br>
 pass：2020
 
-テストユーザー
-メールアドレス：test1234@test.com
-pass:test1234
+ユーザーログインは以下のテストユーザーをお使いください。
+テストユーザー<br>
+メールアドレス：test1234@test.com<br>
+pass:test1234<br>
  
 # DEMO
  ・新規登録<br>
@@ -75,6 +76,12 @@ pass：2020<br>
 以下のpassを入力してください。<br>
 ユーザー名：62-night<br>
 pass：2020<br>
+ 
+ユーザーログインは以下のテストユーザーをお使いください。
+テストユーザー<br>
+メールアドレス：test1234@test.com<br>
+pass:test1234<br>
+ 
  
 # Author
  
