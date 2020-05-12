@@ -29,20 +29,11 @@ class InfosController < ApplicationController
 
   # 自分がアウトプットした情報もしくは保存した情報の詳細を見られるようにする
   def show
-    # 中間テーブルより、データを取得し、表示
-    @all_infos = []
+    #ログイン中のユーザーがストックした情報idを取得し、配列として格納
+    @all_infos = InfoUser.where(user: current_user).pluck(:info_id)
 
-    id = current_user.id
-    @infos = InfoUser.where(user_id: id)
-
-    @infos.each do |i|
-      @all_infos << i.info_id
-    end
-
-    @info = []
-    @all_infos.each do |t|
-    @info << Info.find(t)
-    end
+    #取得した情報idを元に、情報テーブルにて情報を取得し、配列として格納
+    @info = @all_infos.map{|t| Info.find(t)} 
   end
 
   def destroy
